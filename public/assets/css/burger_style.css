@@ -1,0 +1,53 @@
+body {
+	background-image: url("../img/food.png");
+	color: black;
+}
+
+/*Header styles*/
+.jumbotron {
+	background: none;
+	text-align: center;
+	font-family: 'Frijole', cursive;
+}
+.image {
+	background-image: url("../img/burger1.png");
+	height: 250px;
+	width: 250px;
+	margin: auto;
+	background-size: cover;
+}
+
+/*Main Body Styles*/
+h2 {
+	text-align: center;
+	font-family: 'Fredoka One', cursive;
+}
+ul {
+	margin: auto;
+	width: 50%;
+}
+ul li {
+	list-style: none;
+	margin: auto;
+	margin-bottom: 5px;
+	font-family: 'Nunito', sans-serif;
+	font-weight: bold;
+}
+.btn-sm {
+	color: white;
+	background: #498F54;
+}
+
+/*Data Input Styles*/
+#burger-input {
+	height: 100px;
+	width: 300px;
+}
+.create-update-form {
+	text-align: center;
+	margin-top: 30px;
+}
+.btn-md {
+	color: white;
+	background: #337AB7;
+}

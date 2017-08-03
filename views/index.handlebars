@@ -1,0 +1,48 @@
+<div class="jumbotron">
+	<div class="image"></div>
+	<h1>Eat-Da-Burger!</h1>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		<h2>Ready to be Eaten</h2>
+		<ul>
+			{{#each burgers}}
+				{{#unless this.devoured}}
+				<li class="row">
+					<div class="col-md-10">
+						{{this.id}}. {{this.burger_name}}
+					</div>
+					<div class="col-md-2">
+						<form action="/{{this.id}}?_method=PUT" method="POST">
+							<input type="hidden" name="devoured" value="true">
+							<button type="submit" class="btn btn-sm">Devour it!</button>
+						</form>
+					</div>
+				</li>
+				{{/unless}}
+			{{/each}}
+		</ul>
+	</div>
+
+	<div class="col-md-6">
+		<h2>Devoured (NOM!)</h2>
+		<ul>
+			{{#each burgers}}
+				{{#if this.devoured}}
+				<li>
+					{{this.id}}. {{this.burger_name}}
+				</li>
+				{{/if}}
+			{{/each}}
+		</ul>
+	</div>
+</div>
+
+<form class="create-update-form" action="/" method="POST">
+	<div class="form-group">
+		<input type="text" id="burger-input" name="name">
+	</div>
+	<button type="submit" class="btn btn-md">Submit</button>
+	<p>Enter the burger you want to eat. Click "Submit" to add your entry to the list of burgers.</p>
+</form>
