@@ -14,7 +14,7 @@
     "dialect": "mysql"
   },
   "production": {
-    "use_env_variable" : "NODE_ENV",
+    "use_env_variable" : "production",
     "username": "d4hwtx4bmityg6rw",
     "password": "sayf9kfw4upgv1hu",
     "database": "rwwhyvx07euiwrte",
